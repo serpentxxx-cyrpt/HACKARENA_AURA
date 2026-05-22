@@ -1,0 +1,18 @@
+{
+  "short_name": "AURA",
+  "name": "Autonomous Urban Response Agent",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F4F4F0",
+  "theme_color": "#043927",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "Autonomous crisis management and health logistics dispatch copilot for municipal emergencies.",
+  "categories": ["productivity", "utilities"]
+}

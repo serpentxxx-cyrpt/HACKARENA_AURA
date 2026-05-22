@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-aura-bg text-aura-ink font-sans antialiased selection:bg-aura-sos selection:text-white;
+  }
+}
+
+/* Custom visual utilities to enforce premium printed-paper aesthetic */
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F4F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #043927;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E55B13;
+}
+
+/* Flushed Inputs Utility */
+.flushed-input {
+  @apply bg-transparent border-b border-aura-ink rounded-none py-2 px-1 w-full text-aura-ink focus:border-b-2 focus:border-aura-sos focus:ring-0 focus:outline-none transition-all duration-200 font-sans;
+}
+
+.flushed-label {
+  @apply text-xs font-mono uppercase tracking-wider text-aura-ink/60 block mb-1;
+}
+
+/* Slide-to-SOS Slider Styling */
+.sos-slider-track {
+  @apply relative w-full h-16 bg-aura-card border border-aura-ink rounded-full overflow-hidden flex items-center justify-center select-none;
+}
+
+.sos-slider-thumb {
+  @apply absolute left-1 top-1 w-14 h-14 rounded-full bg-aura-sos flex items-center justify-center cursor-grab active:cursor-grabbing text-white border border-aura-ink font-mono font-bold select-none transition-all duration-100 shadow-sm;
+}
+
+/* Google Maps Editorial Overrides */
+.gm-style iframe + div {
+  border: 1px solid #111827 !important;
+}
+
+/* Pulse trigger */
+@keyframes signal-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 91, 19, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(229, 91, 19, 0);
+  }
+}
+
+.animate-sos-pulse {
+  animation: signal-pulse 2s infinite;
+}

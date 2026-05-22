@@ -1,0 +1,16 @@
+{
+  "name": "project-aura",
+  "version": "1.0.0",
+  "description": "Autonomous Urban Response Agent (AURA) - HackArena 2.0",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

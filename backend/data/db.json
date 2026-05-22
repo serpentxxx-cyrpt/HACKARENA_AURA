@@ -1,0 +1,1721 @@
+{
+  "facilities": [
+    {
+      "id": "h1",
+      "name": "AMRI Hospital, Gariahat",
+      "lat": 22.5186,
+      "lng": 88.3712,
+      "region": "Gariahat",
+      "zone": "Hazard Zone",
+      "stock": {
+        "insulin": 29,
+        "oxygen": 15,
+        "food": 45,
+        "water": 100,
+        "first aid": 27
+      },
+      "beds": 120,
+      "specialties": [
+        "Emergency",
+        "Cardiology"
+      ]
+    },
+    {
+      "id": "h2",
+      "name": "SSKM Medical College",
+      "lat": 22.5398,
+      "lng": 88.3444,
+      "region": "Bhowanipore",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 80,
+        "oxygen": 50,
+        "food": 200,
+        "water": 500,
+        "first aid": 150
+      },
+      "beds": 450,
+      "specialties": [
+        "Trauma",
+        "ICU",
+        "Emergency"
+      ]
+    },
+    {
+      "id": "h3",
+      "name": "Belle Vue Clinic",
+      "lat": 22.5365,
+      "lng": 88.3535,
+      "region": "Bhowanipore",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 45,
+        "oxygen": 30,
+        "food": 100,
+        "water": 300,
+        "first aid": 80
+      },
+      "beds": 200,
+      "specialties": [
+        "Emergency",
+        "Neurology"
+      ]
+    },
+    {
+      "id": "h4",
+      "name": "Kolkata Zonal Relief Camp",
+      "lat": 22.5298,
+      "lng": 88.3615,
+      "region": "Ballygunge",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 12,
+        "oxygen": 25,
+        "food": 300,
+        "water": 800,
+        "first aid": 200
+      },
+      "beds": 80,
+      "specialties": [
+        "First Aid",
+        "Supplies"
+      ]
+    },
+    {
+      "id": "h5",
+      "name": "RN Tagore International",
+      "lat": 22.509,
+      "lng": 88.392,
+      "region": "Mukundapur",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 60,
+        "oxygen": 35,
+        "food": 150,
+        "water": 400,
+        "first aid": 120
+      },
+      "beds": 300,
+      "specialties": [
+        "Emergency",
+        "Orthopedics"
+      ]
+    },
+    {
+      "id": "h6",
+      "name": "Peerless Hospital",
+      "lat": 22.504,
+      "lng": 88.3585,
+      "region": "Panchasayyar",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 55,
+        "oxygen": 42,
+        "food": 120,
+        "water": 350,
+        "first aid": 110
+      },
+      "beds": 250,
+      "specialties": [
+        "Emergency",
+        "Oncology"
+      ]
+    },
+    {
+      "id": "h7",
+      "name": "Fortis Hospital, Anandapur",
+      "lat": 22.5125,
+      "lng": 88.4095,
+      "region": "Anandapur",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 70,
+        "oxygen": 55,
+        "food": 180,
+        "water": 450,
+        "first aid": 130
+      },
+      "beds": 400,
+      "specialties": [
+        "Trauma",
+        "Cardiology",
+        "Emergency"
+      ]
+    },
+    {
+      "id": "h8",
+      "name": "CMRI Hospital",
+      "lat": 22.523,
+      "lng": 88.3985,
+      "region": "Alipore",
+      "zone": "Moderate Risk",
+      "stock": {
+        "insulin": 40,
+        "oxygen": 28,
+        "food": 90,
+        "water": 250,
+        "first aid": 70
+      },
+      "beds": 180,
+      "specialties": [
+        "Emergency",
+        "Pediatrics"
+      ]
+    },
+    {
+      "id": "h9",
+      "name": "Woodlands Multispeciality",
+      "lat": 22.528,
+      "lng": 88.347,
+      "region": "Alipore",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 35,
+        "oxygen": 22,
+        "food": 80,
+        "water": 200,
+        "first aid": 60
+      },
+      "beds": 260,
+      "specialties": [
+        "Emergency",
+        "Gastro"
+      ]
+    },
+    {
+      "id": "h10",
+      "name": "Calcutta Medical Research Institute",
+      "lat": 22.535,
+      "lng": 88.365,
+      "region": "Alipore",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 50,
+        "oxygen": 38,
+        "food": 110,
+        "water": 280,
+        "first aid": 90
+      },
+      "beds": 220,
+      "specialties": [
+        "Emergency",
+        "Pulmonology"
+      ]
+    },
+    {
+      "id": "h11",
+      "name": "Apollo Gleneagles, Salt Lake",
+      "lat": 22.5726,
+      "lng": 88.4144,
+      "region": "Salt Lake",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 65,
+        "oxygen": 47,
+        "food": 160,
+        "water": 420,
+        "first aid": 139
+      },
+      "beds": 380,
+      "specialties": [
+        "Emergency",
+        "Cardiac Surgery"
+      ]
+    },
+    {
+      "id": "h12",
+      "name": "Medica Superspecialty Hospital",
+      "lat": 22.568,
+      "lng": 88.428,
+      "region": "Mukundapur",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 58,
+        "oxygen": 44,
+        "food": 140,
+        "water": 380,
+        "first aid": 115
+      },
+      "beds": 350,
+      "specialties": [
+        "Emergency",
+        "Neuro Surgery"
+      ]
+    },
+    {
+      "id": "h13",
+      "name": "NRS Medical College",
+      "lat": 22.556,
+      "lng": 88.368,
+      "region": "Sealdah",
+      "zone": "Moderate Risk",
+      "stock": {
+        "insulin": 75,
+        "oxygen": 60,
+        "food": 220,
+        "water": 600,
+        "first aid": 160
+      },
+      "beds": 500,
+      "specialties": [
+        "Trauma",
+        "Burns",
+        "Emergency"
+      ]
+    },
+    {
+      "id": "h14",
+      "name": "Desun Hospital, New Town",
+      "lat": 22.585,
+      "lng": 88.462,
+      "region": "New Town",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 42,
+        "oxygen": 32,
+        "food": 95,
+        "water": 260,
+        "first aid": 75
+      },
+      "beds": 200,
+      "specialties": [
+        "Emergency",
+        "Orthopedics"
+      ]
+    },
+    {
+      "id": "h15",
+      "name": "Ruby General Hospital",
+      "lat": 22.515,
+      "lng": 88.3965,
+      "region": "Kasba",
+      "zone": "Safe",
+      "stock": {
+        "insulin": 38,
+        "oxygen": 26,
+        "food": 85,
+        "water": 240,
+        "first aid": 65
+      },
+      "beds": 170,
+      "specialties": [
+        "Emergency",
+        "ENT"
+      ]
+    }
+  ],
+  "active_missions": [
+    {
+      "id": "m-1779444376746",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I am bitten by a indian cobra what should i do?",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5726,
+        "lng": 88.3639
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 24
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.573600000000003,
+            "lng": 88.3649
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:06:16.744Z"
+    },
+    {
+      "id": "m-1779445002335",
+      "userId": "citizen-plain-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 14
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:16:42.335Z"
+    },
+    {
+      "id": "m-1779445012553",
+      "userId": "citizen-plain-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 13
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:16:52.552Z"
+    },
+    {
+      "id": "m-1779445039500",
+      "userId": "citizen-plain-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 12
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:17:19.499Z"
+    },
+    {
+      "id": "m-1779445065909",
+      "userId": "citizen-plain-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 2,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 11
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:17:45.908Z"
+    },
+    {
+      "id": "m-1779445066777",
+      "userId": "citizen-diabetic-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 4
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:17:46.776Z"
+    },
+    {
+      "id": "m-1779445067650",
+      "userId": "citizen-oxygen-dependent-user",
+      "originalRequest": "Stuck at home.",
+      "need": "oxygen",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 7
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T10:17:47.649Z"
+    },
+    {
+      "id": "m-1779457940765",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "hi",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5726,
+        "lng": 88.3639
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 7
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.573600000000003,
+            "lng": 88.3649
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T13:52:20.763Z"
+    },
+    {
+      "id": "m-1779457996111",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "i am bitten by a venomous snake",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5726,
+        "lng": 88.3639
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 6
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.573600000000003,
+            "lng": 88.3649
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T13:53:16.110Z"
+    },
+    {
+      "id": "m-1779463647952",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I need help in getting nebulizer",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 5
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:27:27.950Z"
+    },
+    {
+      "id": "m-1779463648698",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I need help in getting nebulizer",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 4
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:27:28.697Z"
+    },
+    {
+      "id": "m-1779463648797",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I need help in getting nebulizer",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 3
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:27:28.796Z"
+    },
+    {
+      "id": "m-1779463653762",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I need help in getting nebulizer",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 2
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:27:33.760Z"
+    },
+    {
+      "id": "m-1779463657437",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I need help in getting nebulizer",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 23
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:27:37.436Z"
+    },
+    {
+      "id": "m-1779463742875",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Okkkk but be quick ok ",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 22
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:29:02.874Z"
+    },
+    {
+      "id": "m-1779463784372",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "I also need oxygen",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 21
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:29:44.370Z"
+    },
+    {
+      "id": "m-1779464585984",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "A dog bite me i need rabbis injection",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.563661636498978,
+        "lng": 88.39254809944399
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 1
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.56466163649898,
+            "lng": 88.39354809944399
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:43:05.983Z"
+    },
+    {
+      "id": "m-1779465114477",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 0
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:51:54.475Z"
+    },
+    {
+      "id": "m-1779465114502",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "ruby-gen",
+        "name": "Ruby General Hospital",
+        "coords": {
+          "lat": 22.5143,
+          "lng": 88.4068
+        },
+        "remainingStock": 19
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:51:54.501Z"
+    },
+    {
+      "id": "m-1779465114579",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "ruby-gen",
+        "name": "Ruby General Hospital",
+        "coords": {
+          "lat": 22.5143,
+          "lng": 88.4068
+        },
+        "remainingStock": 18
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:51:54.577Z"
+    },
+    {
+      "id": "m-1779465114598",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "ruby-gen",
+        "name": "Ruby General Hospital",
+        "coords": {
+          "lat": 22.5143,
+          "lng": 88.4068
+        },
+        "remainingStock": 17
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:51:54.597Z"
+    },
+    {
+      "id": "m-1779465114655",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "ruby-gen",
+        "name": "Ruby General Hospital",
+        "coords": {
+          "lat": 22.5143,
+          "lng": 88.4068
+        },
+        "remainingStock": 16
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T15:51:54.654Z"
+    },
+    {
+      "id": "m-1779465715218",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Dog bite\n",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 20
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564653204730423,
+            "lng": 88.39361713390034
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:01:55.216Z"
+    },
+    {
+      "id": "m-1779466722126",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Immediate crisis support requested for [object Object]",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 19
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:18:42.122Z"
+    },
+    {
+      "id": "m-1779466735987",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Hi",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.563654836106082,
+        "lng": 88.3925723204619
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 18
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.564654836106083,
+            "lng": 88.3935723204619
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:18:55.985Z"
+    },
+    {
+      "id": "m-1779467490111",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Dog bite emergency at Beleghata Rashmoni Bazar, Kolkata involving 2 people (user and uncle) requiring rabies injection and first-aid.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 2,
+      "userLocation": {
+        "lat": 22.5726,
+        "lng": 88.3639
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 17
+      },
+      "spatial": {
+        "weatherAlert": "Moderate haze conditions in central Kolkata. Low immediate waterlogging risk, but monitor for sudden weather changes.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed northwest on Central Avenue toward Bowbazar (high-elevation, low flood risk).",
+          "Avoid low-lying zones like Thanthania Kalibari and Esplanade underpasses.",
+          "Turn right onto Acharya Jagadish Chandra Bose Road toward Calcutta Medical College (safety zone).",
+          "If waterlogging observed, reroute via Lenin Sarani to Park Street (elevated)."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5745,
+            "lng": 88.3612
+          },
+          {
+            "lat": 22.5758,
+            "lng": 88.3589
+          },
+          {
+            "lat": 22.5763,
+            "lng": 88.353
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:31:30.108Z"
+    },
+    {
+      "id": "m-1779467833024",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Dog bite with suspected rabies exposure at Beleghata Rashmoni Bazar; 2 people (user and uncle) require rabies vaccine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5726,
+        "lng": 88.3639
+      },
+      "facility": {
+        "id": "cal-med-coll",
+        "name": "Calcutta Medical College",
+        "coords": {
+          "lat": 22.5746,
+          "lng": 88.3612
+        },
+        "remainingStock": 16
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.573600000000003,
+            "lng": 88.3649
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:37:13.022Z"
+    },
+    {
+      "id": "m-1779467908151",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "how much time it will need?",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5204,
+        "lng": 88.3719
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 10
+      },
+      "spatial": {
+        "weatherAlert": "Moderate haze conditions in Behala. Low immediate waterlogging risk, but monitor for sudden weather changes.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Diamond Harbour Road toward Tollygunge.",
+          "Avoid low-lying areas near Behala Bazar; take elevated routes via Raja Rammohan Roy Road.",
+          "Head toward the safety zone at Alipore (high-elevation area).",
+          "If conditions worsen, seek shelter at SSKM Hospital (22.5286, 88.3428)."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.523,
+            "lng": 88.368
+          },
+          {
+            "lat": 22.526,
+            "lng": 88.355
+          },
+          {
+            "lat": 22.528,
+            "lng": 88.345
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T16:38:28.150Z"
+    },
+    {
+      "id": "m-1779470103187",
+      "userId": "+919876543210",
+      "originalRequest": "AURA_SOS | Lat:22.5637,Lng:88.3926 | ",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 9
+      },
+      "spatial": {
+        "weatherAlert": "Mild haze conditions in Behala. Low immediate waterlogging risk, but monitor for sudden weather changes.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed northeast on Diamond Harbour Road toward Tollygunge Circular Road (elevated area).",
+          "Avoid low-lying zones near Behala Bazar and James Long Sarani underpass.",
+          "Follow Tollygunge Circular Road to reach high-elevation safety near Rashbehari Avenue.",
+          "If conditions worsen, reroute to SSKM Hospital (elevated zone) via Acharya Jagadish Chandra Bose Road."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.521,
+            "lng": 88.3685
+          },
+          {
+            "lat": 22.525,
+            "lng": 88.362
+          },
+          {
+            "lat": 22.528,
+            "lng": 88.358
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T17:15:03.185Z"
+    },
+    {
+      "id": "m-1779470147503",
+      "userId": "+919876543210",
+      "originalRequest": "AURA_SOS | Lat:22.5637,Lng:88.3926 | ",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "amri-dhakuria",
+        "name": "AMRI Hospital Dhakuria",
+        "coords": {
+          "lat": 22.5103,
+          "lng": 88.368
+        },
+        "remainingStock": 8
+      },
+      "spatial": {
+        "weatherAlert": "Mild haze conditions in Behala. Low immediate waterlogging risk, but monitor for sudden weather changes.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Diamond Harbour Road toward Tollygunge Circular Road (elevated area).",
+          "Avoid low-lying zones near Behala Bazar and James Long Sarani.",
+          "Follow Tollygunge Circular Road to reach the safety of Rashbehari Avenue (higher elevation).",
+          "If conditions worsen, head to SSKM Hospital (22.5298, 88.3606) via safe arterial roads."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.521,
+            "lng": 88.3705
+          },
+          {
+            "lat": 22.525,
+            "lng": 88.368
+          },
+          {
+            "lat": 22.528,
+            "lng": 88.365
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T17:15:47.502Z"
+    },
+    {
+      "id": "m-1779472760589",
+      "userId": "citizen-plain-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 2,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "h1",
+        "name": "AMRI Hospital, Gariahat",
+        "coords": {
+          "lat": 22.5186,
+          "lng": 88.3712
+        },
+        "remainingStock": 29
+      },
+      "spatial": {
+        "weatherAlert": "Moderate haze with high humidity in Behala. Low immediate flooding risk, but waterlogging possible in low-lying areas during sudden rainfall.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Diamond Harbour Road toward Tollygunge Phari.",
+          "Avoid low-lying zones near Behala Bazar; take elevated route via Raja Rammohan Roy Road.",
+          "Turn east onto Rashbehari Avenue, heading toward Gariahat flyover (high-elevation safety zone).",
+          "If waterlogging occurs, reroute to SSKM Hospital via AJC Bose Road (elevated)."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5205,
+            "lng": 88.369
+          },
+          {
+            "lat": 22.523,
+            "lng": 88.365
+          },
+          {
+            "lat": 22.525,
+            "lng": 88.36
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T17:59:20.588Z"
+    },
+    {
+      "id": "m-1779472766558",
+      "userId": "citizen-diabetic-user",
+      "originalRequest": "I need help finding medicine.",
+      "need": "insulin",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "h1",
+        "name": "AMRI Hospital, Gariahat",
+        "coords": {
+          "lat": 22.5186,
+          "lng": 88.3712
+        },
+        "remainingStock": 29
+      },
+      "spatial": {
+        "weatherAlert": "Moderate haze with high humidity in Behala area. Low immediate flooding risk, but monitor for sudden waterlogging in low-lying zones.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Diamond Harbour Road toward Tollygunge Phari.",
+          "Avoid low-lying areas near Behala Bazar; use elevated streets like Raja Rammohan Roy Road.",
+          "Turn east onto Rashbehari Avenue, heading toward Gariahat flyover (high-elevation zone).",
+          "Reach safety at AMRI Hospital (Gariahat) or continue to Ballygunge Science College area if further assistance is needed."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.522,
+            "lng": 88.368
+          },
+          {
+            "lat": 22.528,
+            "lng": 88.362
+          },
+          {
+            "lat": 22.531,
+            "lng": 88.358
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T17:59:26.557Z"
+    },
+    {
+      "id": "m-1779472767291",
+      "userId": "citizen-oxygen-dependent-user",
+      "originalRequest": "Stuck at home.",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 2,
+      "userLocation": {
+        "lat": 22.5186,
+        "lng": 88.3712
+      },
+      "facility": {
+        "id": "h1",
+        "name": "AMRI Hospital, Gariahat",
+        "coords": {
+          "lat": 22.5186,
+          "lng": 88.3712
+        },
+        "remainingStock": 28
+      },
+      "spatial": {
+        "weatherAlert": "Standard monsoonal precipitation detected. Wet driving conditions active.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Normal arterial routing is functional.",
+          "Check meteorological updates before traversing underpasses.",
+          "Report any drain failures to municipal services."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5196,
+            "lng": 88.3722
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T17:59:27.290Z"
+    },
+    {
+      "id": "m-1779473056829",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Emergency: 1 person at Beleghata, Building 27/H/16 requires oxygen due to breathing difficulty. Nearby SSKM Medical College has 50 oxygen cylinders in stock.",
+      "need": "oxygen",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56365320473042,
+        "lng": 88.39261713390033
+      },
+      "facility": {
+        "id": "h11",
+        "name": "Apollo Gleneagles, Salt Lake",
+        "coords": {
+          "lat": 22.5726,
+          "lng": 88.4144
+        },
+        "remainingStock": 47
+      },
+      "spatial": {
+        "weatherAlert": "Haze conditions with high humidity in central Kolkata. Low immediate waterlogging risk, but monitor for sudden weather changes.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Central Avenue toward Bowbazar (high-elevation zone). Avoid low-lying areas near Sealdah.",
+          "Turn right onto Acharya Prafulla Chandra Road, heading toward College Street (elevated and well-drained).",
+          "Continue to Calcutta Medical College (safety zone) for oxygen assistance. Avoid Thanthania Kalibari due to potential waterlogging."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5685,
+            "lng": 88.392
+          },
+          {
+            "lat": 22.572,
+            "lng": 88.369
+          },
+          {
+            "lat": 22.5735,
+            "lng": 88.3645
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T18:04:16.827Z"
+    },
+    {
+      "id": "m-1779473135567",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Dhonobad",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 3,
+      "userLocation": {
+        "lat": 22.5204,
+        "lng": 88.3719
+      },
+      "facility": {
+        "id": "h1",
+        "name": "AMRI Hospital, Gariahat",
+        "coords": {
+          "lat": 22.5186,
+          "lng": 88.3712
+        },
+        "remainingStock": 27
+      },
+      "spatial": {
+        "weatherAlert": "Haze conditions with high humidity in Behala. Moderate waterlogging risk in low-lying areas due to recent rainfall.",
+        "floodRiskScore": 3,
+        "safeDirections": [
+          "Avoid low-lying zones near Behala Chowrasta and Diamond Harbour Road.",
+          "Head northeast on Raja Rammohan Roy Road toward Tollygunge Circular Road (elevated area).",
+          "Continue toward Hazra Crossing, then proceed to Rashbehari Avenue (safe, high-elevation route).",
+          "Seek shelter at SSKM Hospital or nearby high-ground areas if waterlogging worsens."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5225,
+            "lng": 88.37
+          },
+          {
+            "lat": 22.525,
+            "lng": 88.365
+          },
+          {
+            "lat": 22.528,
+            "lng": 88.358
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T18:05:35.565Z"
+    },
+    {
+      "id": "m-1779473833761",
+      "userId": "Tridibesh Sen",
+      "originalRequest": "Slide SOS Offline Triggered",
+      "need": "first aid",
+      "status": "DISPATCHED",
+      "priority": 1,
+      "userLocation": {
+        "lat": 22.56366153388583,
+        "lng": 88.39252470724551
+      },
+      "facility": {
+        "id": "h11",
+        "name": "Apollo Gleneagles, Salt Lake",
+        "coords": {
+          "lat": 22.5726,
+          "lng": 88.4144
+        },
+        "remainingStock": 139
+      },
+      "spatial": {
+        "weatherAlert": "Haze conditions with high humidity (94%) in central Kolkata. Low immediate rain risk, but waterlogging possible in low-lying zones due to recent drainage issues.",
+        "floodRiskScore": 2,
+        "safeDirections": [
+          "Proceed north on Central Avenue toward Bowbazar (high-elevation zone). Avoid Thanthania Kalibari underpass.",
+          "Turn east onto Acharya Jagadish Chandra Bose Road, heading toward Park Circus Maidan (elevated area).",
+          "If waterlogging observed, reroute via Lenin Sarani to reach Calcutta Medical College (safety zone).",
+          "Avoid low-lying areas near Sealdah and Mullick Bazar."
+        ],
+        "safeWaypoints": [
+          {
+            "lat": 22.5655,
+            "lng": 88.3912
+          },
+          {
+            "lat": 22.5678,
+            "lng": 88.389
+          },
+          {
+            "lat": 22.569,
+            "lng": 88.385
+          }
+        ]
+      },
+      "timestamp": "2026-05-22T18:17:13.758Z"
+    }
+  ]
+}
