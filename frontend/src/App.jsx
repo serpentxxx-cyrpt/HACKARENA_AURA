@@ -2294,6 +2294,7 @@ export default function App() {
           setIsSMSModalOpen(false);
         }} 
         payload={smsPayload}
+        userLocation={userLocation}
         onWhatsAppTrigger={() => {
           addLedgerLog(`SMS_MODAL: User selected WhatsApp Handoff. Coordinating local routing trackers.`);
           setCurrentView('citizen-tracker');

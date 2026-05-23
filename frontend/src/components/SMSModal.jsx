@@ -1,40 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { X, MessageSquare, PhoneCall, ArrowRight, Clipboard } from 'lucide-react';
 
-export default function SMSModal({ isOpen, onClose, payload, onSimulateDispatch }) {
+export default function SMSModal({ isOpen, onClose, payload, userLocation, onSimulateDispatch }) {
   if (!isOpen) return null;
 
   // State for geolocation and handoff UI
-  const [lat, setLat] = useState('Unknown');
-  const [lng, setLng] = useState('Unknown');
+  const [lat, setLat] = useState('22.5726');
+  const [lng, setLng] = useState('88.3639');
   const [handoffStarted, setHandoffStarted] = useState(false);
 
-  // Capture geolocation on mount
+  // Capture geolocation on mount as fallback
   useEffect(() => {
-    if (navigator.geolocation) {
+    if (!userLocation?.lat && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          setLat(position.coords.latitude.toFixed(4));
-          setLng(position.coords.longitude.toFixed(4));
+          setLat(position.coords.latitude.toFixed(5));
+          setLng(position.coords.longitude.toFixed(5));
         },
         () => {
-          setLat('Unknown');
-          setLng('Unknown');
+          setLat('22.5726');
+          setLng('88.3639');
         }
       );
     }
-  }, []);
+  }, [userLocation]);
+
+  const displayLat = userLocation?.lat ? userLocation.lat.toFixed(5) : lat;
+  const displayLng = userLocation?.lng ? userLocation.lng.toFixed(5) : lng;
 
   // Helper to generate compressed message
   const generatePackedMessage = () => {
-    const base = `AURA_SOS | Lat:${lat},Lng:${lng} | ${payload}`;
+    const base = `AURA_SOS | Lat:${displayLat},Lng:${displayLng} | ${payload || 'Distress coordinates signal'}`;
     return encodeURIComponent(base);
   };
 
   // Copy raw packet helper
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(`AURA_SOS:${payload}`);
-    alert('SOS Payload copied to clipboard!');
+    navigator.clipboard.writeText(`AURA_SOS | Lat:${displayLat},Lng:${displayLng} | ${payload || 'Distress coordinates signal'}`);
+    alert('SOS distress packet (with GPS coordinates) copied to clipboard!');
   };
 
   if (handoffStarted) {
@@ -87,11 +90,11 @@ export default function SMSModal({ isOpen, onClose, payload, onSimulateDispatch 
         </div>
 
         {/* Payload Display */}
-        <div className="font-mono bg-aura-ink text-aura-bg p-5 text-xs mb-6 border border-aura-ink rounded-none relative overflow-x-auto break-all select-text">
+        <div className="font-mono bg-aura-ink text-aura-bg p-5 text-xs mb-6 border border-aura-ink rounded-none relative overflow-x-auto break-all select-text space-y-1.5">
           <div className="absolute right-3 top-3 text-[9px] text-white/40 tracking-widest font-mono">ENCRYPTED COGNITIVE PACKET</div>
-          <span className="text-aura-sos font-bold">AURA_SOS</span>
-          <span className="text-white">:</span>
-          {payload}
+          <div><span className="text-aura-sos font-bold font-mono uppercase tracking-wide">Tag:</span> AURA_SOS</div>
+          <div><span className="text-aura-sos font-bold font-mono uppercase tracking-wide">GPS:</span> Lat {displayLat}, Lng {displayLng}</div>
+          <div><span className="text-aura-sos font-bold font-mono uppercase tracking-wide">Payload:</span> {payload || 'Distress coordinates signal'}</div>
         </div>
 
         {/* Dual Branch Toggles */}
