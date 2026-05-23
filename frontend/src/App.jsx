@@ -35,6 +35,7 @@ import OnlineTriagentChat from './components/OnlineTriagentChat';
 import MedicalProfile from './components/MedicalProfile';
 import LoginPortal from './components/LoginPortal';
 import LogoutButton from './components/LogoutButton';
+import ManualOverridePanel from './components/ManualOverridePanel';
 import { auth } from './config/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
@@ -236,6 +237,7 @@ export default function App() {
   const [routeEta, setRouteEta] = useState(null);
   const [agentAuditLogs, setAgentAuditLogs] = useState([]);
   const [falseAlarmSending, setFalseAlarmSending] = useState(false);
+  const [overrideTicket, setOverrideTicket] = useState(null);
 
   // Request geolocation on app load and watch for exact updates
   useEffect(() => {
@@ -1985,9 +1987,7 @@ export default function App() {
                       </button>
                       <button
                         onClick={() => {
-                          setActiveAlerts(prev => prev.map(a => a.id === selectedTicket.id ? { ...a, status: 'overridden' } : a));
-                          setSelectedRoute(null);
-                          alert('Manual dispatch routing override engaged.');
+                          setOverrideTicket(selectedTicket);
                           setSelectedTicket(null);
                         }}
                         className="flex-1 py-3 px-6 bg-white border border-aura-ink text-aura-ink rounded-full font-bold text-xs uppercase hover:bg-aura-bg active:translate-y-0.5 transition-all text-center flex items-center justify-center gap-1.5"
@@ -1997,6 +1997,63 @@ export default function App() {
                     </div>
                   </div>
                 </div>
+              )}
+
+              {/* MANUAL OVERRIDE SPLIT CONTROL PANEL */}
+              {overrideTicket && (
+                <ManualOverridePanel
+                  missionData={overrideTicket}
+                  hospitals={hospitals}
+                  onClose={() => setOverrideTicket(null)}
+                  onDeploy={(modifiedLogistics) => {
+                    // Update active alerts with human overridden parameters
+                    setActiveAlerts(prev => prev.map(alert => 
+                      alert.id === overrideTicket.id 
+                        ? { 
+                            ...alert, 
+                            status: 'overridden',
+                            message: `HQ OVERRIDE: Deployed ${modifiedLogistics.logistics.rescue_unit_vehicle} to route specialized medical payload.`,
+                            apiResponse: {
+                              ...alert.apiResponse,
+                              logistics: {
+                                ...alert.apiResponse?.logistics,
+                                target_facility_name: modifiedLogistics.logistics.target_facility_name,
+                                route_profile: modifiedLogistics.logistics.route_profile,
+                                route_eta_minutes: modifiedLogistics.logistics.route_eta_minutes,
+                                route_distance_km: modifiedLogistics.logistics.route_distance_km,
+                                rescue_unit_vehicle: modifiedLogistics.logistics.rescue_unit_vehicle
+                              }
+                            }
+                          } 
+                        : alert
+                    ));
+
+                    // Decrement inventories locally to mirror real-time consumption
+                    setHospitals(prevHospitals => prevHospitals.map(h => {
+                      if (h.id === modifiedLogistics.logistics.target_facility_id) {
+                        const updatedStock = { ...h.stock };
+                        const primaryNeed = modifiedLogistics.logistics.primary_need.toLowerCase();
+                        if (updatedStock[primaryNeed] > 0) {
+                          updatedStock[primaryNeed] -= 1;
+                        }
+                        modifiedLogistics.logistics.extra_supplies.forEach(item => {
+                          const normalItem = item.toLowerCase();
+                          if (updatedStock[normalItem] > 0) {
+                            updatedStock[normalItem] -= 1;
+                          } else if (normalItem === 'oxygen cylinder' && updatedStock['oxygen'] > 0) {
+                            updatedStock['oxygen'] -= 1;
+                          }
+                        });
+                        return { ...h, stock: updatedStock };
+                      }
+                      return h;
+                    }));
+
+                    addLedgerLog(`DISPATCH_OVERRIDE: Manual override committed for ticket ${overrideTicket.id}. Deployed ${modifiedLogistics.logistics.rescue_unit_vehicle} to ${modifiedLogistics.logistics.target_facility_name}.`);
+                    alert(`Supervisory Override Successful! Dispatching ${modifiedLogistics.logistics.rescue_unit_vehicle} to ${modifiedLogistics.logistics.target_facility_name}.`);
+                    setOverrideTicket(null);
+                  }}
+                />
               )}
 
               {/* LIVE INVENTORY CAPACITY TRACKER CONTROLS */}
