@@ -38,6 +38,20 @@ const HOSPITAL_SVG = `
   <text x="18" y="24" text-anchor="middle" font-size="18" fill="white">🏥</text>
 </svg>`;
 
+const USER_LOCATION_SVG = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <radialGradient id="user-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="1" />
+      <stop offset="30%" stop-color="#3B82F6" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <circle cx="24" cy="24" r="22" fill="url(#user-glow)" />
+  <circle cx="24" cy="24" r="7" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2.5" />
+</svg>`;
+
 export default function GoogleMap({
   activeAlerts = [],
   hospitals = [],
@@ -46,7 +60,8 @@ export default function GoogleMap({
   selectedHospital = null,
   onHospitalSelect = null,
   onRouteComputed = null,
-  onEtaUpdate = null
+  onEtaUpdate = null,
+  customCenter = null
 }) {
   const mapContainerRef = useRef(null);
   const [mapInstance, setMapInstance] = useState(null);
@@ -58,6 +73,8 @@ export default function GoogleMap({
   const directionsRendererRef = useRef(null);
   const ambulanceMarkerRef = useRef(null);
   const userMarkerRef = useRef(null);
+  const userCircleRef = useRef(null);
+  const hasCenteredRef = useRef(false);
   const ambulanceAnimRef = useRef(null);
 
   // Dynamically load Google Maps script
@@ -101,9 +118,11 @@ export default function GoogleMap({
   useEffect(() => {
     if (!googleLoaded || !mapContainerRef.current) return;
 
-    const center = userLocation && userLocation.lat
-      ? { lat: userLocation.lat, lng: userLocation.lng }
-      : { lat: 22.5224, lng: 88.3719 };
+    const center = customCenter
+      ? customCenter
+      : (userLocation && userLocation.lat
+        ? { lat: userLocation.lat, lng: userLocation.lng }
+        : { lat: 22.5224, lng: 88.3719 });
 
     const map = new window.google.maps.Map(mapContainerRef.current, {
       center: center,
@@ -119,48 +138,62 @@ export default function GoogleMap({
     setMapInstance(map);
   }, [googleLoaded]);
 
-  // Update map center when user location changes
+  // Update map center when user location first becomes available
   useEffect(() => {
-    if (!mapInstance || !userLocation?.lat) return;
-    mapInstance.panTo({ lat: userLocation.lat, lng: userLocation.lng });
-  }, [mapInstance, userLocation?.lat, userLocation?.lng]);
+    if (!mapInstance || !userLocation?.lat || customCenter) return;
+    
+    if (!hasCenteredRef.current) {
+      mapInstance.setCenter({ lat: userLocation.lat, lng: userLocation.lng });
+      hasCenteredRef.current = true;
+      console.log(`[AURA Map] Initial auto-center executed at (${userLocation.lat.toFixed(5)}, ${userLocation.lng.toFixed(5)})`);
+    }
+  }, [mapInstance, userLocation?.lat, userLocation?.lng, customCenter]);
 
-  // Place user location marker
+  // Place user location marker with proper cleanup and premium styling
   useEffect(() => {
     if (!mapInstance || !googleLoaded || !userLocation?.lat) return;
 
+    // Clean up previous marker
     if (userMarkerRef.current) {
       userMarkerRef.current.setMap(null);
+    }
+    // Clean up previous circle to prevent stacked leak artifacts
+    if (userCircleRef.current) {
+      userCircleRef.current.setMap(null);
     }
 
     const marker = new window.google.maps.Marker({
       position: { lat: userLocation.lat, lng: userLocation.lng },
       map: mapInstance,
-      title: 'Your Location',
+      title: 'Your Exact Location',
       icon: {
-        path: window.google.maps.SymbolPath.CIRCLE,
-        fillColor: '#3B82F6',
-        fillOpacity: 1,
-        strokeColor: '#FFFFFF',
-        strokeWeight: 3,
-        scale: 10
+        url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(USER_LOCATION_SVG),
+        scaledSize: new window.google.maps.Size(32, 32),
+        anchor: new window.google.maps.Point(16, 16)
       },
       zIndex: 999
     });
 
-    // Add pulsing effect circle
-    new window.google.maps.Circle({
+    // Add glowing exact location radar boundary circle
+    const circle = new window.google.maps.Circle({
       map: mapInstance,
       center: { lat: userLocation.lat, lng: userLocation.lng },
-      radius: 150,
+      radius: 120, // 120m precise radius
       fillColor: '#3B82F6',
-      fillOpacity: 0.1,
+      fillOpacity: 0.12,
       strokeColor: '#3B82F6',
-      strokeOpacity: 0.3,
-      strokeWeight: 1
+      strokeOpacity: 0.4,
+      strokeWeight: 1.5
     });
 
     userMarkerRef.current = marker;
+    userCircleRef.current = circle;
+
+    // Cleanup markers and circles on unmount/update
+    return () => {
+      marker.setMap(null);
+      circle.setMap(null);
+    };
   }, [mapInstance, googleLoaded, userLocation?.lat, userLocation?.lng]);
 
   // Handle hospital markers, alert markers, and route rendering
@@ -464,6 +497,23 @@ export default function GoogleMap({
         </div>
       )}
       <div ref={mapContainerRef} className="w-full h-full" style={{ minHeight: '300px' }} />
+
+      {/* Brutalist Recenter Button */}
+      {googleLoaded && userLocation?.lat && (
+        <button
+          onClick={() => {
+            if (mapInstance) {
+              mapInstance.panTo({ lat: userLocation.lat, lng: userLocation.lng });
+              mapInstance.setZoom(15);
+              console.log('[AURA Map] Manually re-centered viewport.');
+            }
+          }}
+          className="absolute bottom-16 right-3 z-20 bg-white hover:bg-neutral-50 text-aura-ink border border-aura-ink p-2 shadow-sm transition-all hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer"
+          title="Re-center Map"
+        >
+          <Navigation className="w-4 h-4 fill-aura-hero stroke-aura-hero rotate-45" />
+        </button>
+      )}
 
       {/* ETA Overlay */}
       {routeEta && selectedHospital && (

@@ -237,7 +237,7 @@ export default function App() {
   const [agentAuditLogs, setAgentAuditLogs] = useState([]);
   const [falseAlarmSending, setFalseAlarmSending] = useState(false);
 
-  // Request geolocation on app load
+  // Request geolocation on app load and watch for exact updates
   useEffect(() => {
     if (!navigator.geolocation) {
       setLocationLoading(false);
@@ -246,22 +246,49 @@ export default function App() {
       return;
     }
 
+    // Phase 1: Try a quick, low-timeout fetch to display something instantly
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const loc = { lat: position.coords.latitude, lng: position.coords.longitude };
         setUserLocation(loc);
         setLocationLoading(false);
         setLocationPermission('granted');
-        console.log(`[AURA Location] Acquired: ${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)}`);
+        console.log(`[AURA Location] Initial fast-lock acquired: ${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)}`);
       },
       (err) => {
-        console.warn('[AURA Location] Permission denied:', err.message);
-        setLocationLoading(false);
-        setLocationPermission('denied');
-        setUserLocation({ lat: 22.5726, lng: 88.3639 });
+        console.warn('[AURA Location] Initial position fetch failed:', err.message);
       },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+      { enableHighAccuracy: true, timeout: 5000, maximumAge: 30000 }
     );
+
+    // Phase 2: Establish a high-accuracy, continuous watch telemetry channel
+    const watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        const loc = { lat: position.coords.latitude, lng: position.coords.longitude };
+        setUserLocation(loc);
+        setLocationLoading(false);
+        setLocationPermission('granted');
+        console.log(`[AURA Location] High-accuracy telemetry update: ${loc.lat.toFixed(5)}, ${loc.lng.toFixed(5)}`);
+      },
+      (err) => {
+        console.warn('[AURA Location] Geolocation watch error:', err.message);
+        // Fall back to Kolkata standard coordinates ONLY if we don't have any lock yet
+        setUserLocation((current) => {
+          if (!current) {
+            return { lat: 22.5726, lng: 88.3639 };
+          }
+          return current;
+        });
+        setLocationLoading(false);
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+    );
+
+    // Clean up the watcher subscription on unmount
+    return () => {
+      navigator.geolocation.clearWatch(watchId);
+      console.log('[AURA Location] Telemetry watch channel closed.');
+    };
   }, []);
 
   // Fetch nearest hospitals from backend when location is available
