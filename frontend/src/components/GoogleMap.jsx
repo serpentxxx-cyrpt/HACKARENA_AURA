@@ -352,8 +352,8 @@ export default function GoogleMap({
 
     directionsRendererRef.current = directionsRenderer;
 
-    const origin = { lat: userLocation.lat, lng: userLocation.lng };
-    const destination = { lat: selectedHospital.lat, lng: selectedHospital.lng };
+    const origin = { lat: selectedHospital.lat, lng: selectedHospital.lng };
+    const destination = { lat: userLocation.lat, lng: userLocation.lng };
 
     directionsService.route(
       {
@@ -404,7 +404,7 @@ export default function GoogleMap({
           const routePath = result.routes[0].overview_path;
           let currentStep = 0;
           const totalSteps = routePath.length;
-          const actualInterval = 200; // Fast-forwarded demo animation speed (200ms per step)
+          const actualInterval = 1000; // Realistic steady animation speed (1000ms per step)
 
           ambulanceAnimRef.current = setInterval(() => {
             currentStep++;
